@@ -1,2 +1,2 @@
 # Parking-Allotment-System
-A simple Parking Allotment System 
+The Parking Allotment System is a comprehensive solution designed to manage parking spaces efficiently. It automates the process of allotting parking slots, monitoring their usage, and notifying users when their allotted parking time is about to expire. One of the key features of this system is the integration with WhatsApp to send reminders to users when their parking time is nearing its end.
