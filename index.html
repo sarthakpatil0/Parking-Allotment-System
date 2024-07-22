@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--head content -->
+    <!-- ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Allotment System</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <!-- Admin Login Page -->
+    <div class="admin-login-container">
+        <h1>Admin Login</h1>
+        <form action="connect.php" method="post" id="adminLoginForm" onsubmit="return loginAdmin()">
+            <input class="admin" type="text" id="adminId" placeholder="Admin ID" required class="form-input" name="adminId"><br>
+            <input class="password" type="password" id="adminPassword" placeholder="Password" required class="form-input" name="adminPassword"><br>
+            <button class="login" type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Customer Details Collection Page (hidden by default) -->
+    <div class="customer-details-container" id="customerDetailsPage">
+        <h1>Customer Details</h1>
+        <form id="customerDetailsForm" onsubmit="return submitCustomerDetails()">
+            <input class="customerName" type="text" id="customerName" placeholder="Name" required class="form-input" name="customerName"><br>
+            <input class="emailId" type="email" id="customerEmail" placeholder="Email" required class="form-input" name="email"><br>
+            <input class="customerPhone" type="tel" id="customerPhone" placeholder="Phone Number" required class="form-input" name="customerPhone"><br>
+            <input class="bookingDate" type="date" id="bookingDate" required class="form-input" name="bookingDate"><br>
+            <input class="vehicleNumber" type="text" id="vehicleNumber" placeholder="Vehicle Number" required class="form-input" name="vehicleNumber"><br>
+            <input class="bookingTime" type="time" id="bookingTime" required class="form-input" name="bookingTime"><br>
+            <input class="durationHours" type="number" id="durationHours" placeholder="Duration (hours)" required class="form-input" name="durationHours"><br>
+            <button class="submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+       <!-- Parking Slot Selection Page (hidden by default) -->
+       <div class="parking-container" id="parkingPage">
+        <!-- <script -->
+        <h1>Parking Slot Selection</h1>
+        <p>Select a parking slot:</p>
+        <div id="parkingSlots">
+            <!-- Parking slots will be dynamically generated here -->
+        </div>
+        <p id="parkingFee">Parking fee: $0</p>
+        <p id="fine">Fine: $0</p>
+        <button class="confirm" onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+
+    <!-- Timer Section (visible by default) -->
+    <div class="timer-container" id="timerSection">
+        <h1>Timer</h1>
+        <div id="app"></div>
+        <button id="start-button" class="start-button">Start</button>
+
+    </div>
+
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
